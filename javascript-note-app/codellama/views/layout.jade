@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if message
+      .message(class=message.type)
+        p #{message.text}
+      
+
+    ul.navbar
+      li: a(href='/') Home
+      if username
+        li: a(href='/logout') Logout
+      else
+        li: a(href='/login') Login
+        li: a(href='/register') Register
+    block content

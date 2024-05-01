@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .note-container
+    if note
+      h1.title #{note.title}
+      if note.is_encrypted
+        p.note-status Note is encrypted.
+      else
+        p.note-content #{note.content}
+    else
+      p Note not found or the link is invalid.
+
+  if note && !note.is_encrypted
+    .actions
+      a(href='/') Back to Notes
+

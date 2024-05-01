@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Note</title>
+    <!-- Add any necessary CSS or other head elements -->
+</head>
+<body>
+    <h1>Upload a Note</h1>
+    <form action="{{ url_for('upload_note') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".json">
+        <input type="submit" value="Upload Note">
+    </form>
+</body>
+</html>
